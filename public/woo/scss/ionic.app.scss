@@ -1,0 +1,131 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+#login{
+	background-color: #1abc9c;
+	h2{
+		margin-top: 48px;
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+	}
+	.list{
+		width: 72%;
+		margin: 26px auto 0;
+		max-width: 300px;
+		label{
+			margin-bottom: 12px;
+			height: 32px;
+			border: none;
+			input{
+				color: #666;
+			}
+		}
+		>a{
+			display: block;
+			width: 36px;
+			margin: 40px auto 0;
+			i{
+				font-size: 36px;
+				color: #fff;
+			}
+		}
+	}
+	.register{
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		color: #fff;
+		i{
+			font-size: 28px;
+		}
+	}
+}
+
+#woo-side{
+	.side-top{
+		height: 36px;
+		.add-time{
+			position: absolute;
+			top: 0;
+			right: 0;
+			min-height: 0;
+			height: 36px;
+			color: #F90A0A;
+			border: none;
+			background-color: transparent;
+			z-index: 10;
+			i{
+				font-size: 24px;
+				line-height: 36px;
+			}
+		}
+		.bar-header{
+			border-bottom: 1px solid #909090;
+			.title{
+				height: 36px;
+				color: #666;
+				line-height: 36px;
+			}
+		}
+	}
+	.side-nav{
+		position: absolute;
+		bottom: 44px;
+		left: 0;
+		button{
+			&:before{
+				font-size: 24px;
+				color: #666;
+			}
+		}
+	}
+	.menu-content{
+		box-shadow: none;
+		border: none;
+	}
+	.menu-left{
+		background-color: #5E5E5E;
+		.bar-header{
+			background: transparent;
+			.title{
+				color: #999;
+			}
+		}
+		.list{
+			.side-item{
+				padding: 8px 0 8px 48px;
+				position: relative;
+				font-size: 14px;
+				color: #fff;
+				background-color: transparent;
+				border-color: #414040;
+				i{
+					position: absolute;
+					left: 20px;
+					top: 11px;
+				}
+			}
+		}
+	}
+}

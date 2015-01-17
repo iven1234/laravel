@@ -1,0 +1,21 @@
+<ion-view id="login">
+	<ion-content>
+		<h2>Welcome woo!</h2>
+		<div class="list">
+			<label class="item item-input">
+				<input name="email" type="text" placeholder="Username" ng-model="user.email">
+			</label>
+			<label class="item item-input">
+				<input name="password" type="password" placeholder="Password" ng-model="user.password">
+			</label>
+
+			<a ng-click="login(user)"><i class="icon-chevron-with-circle-right"></i></a>
+
+		</div>	
+	</ion-content>
+
+	<a class="register" ng-click="register()">
+		<i class="icon-playlist-add"></i>
+	</a>
+	
+</ion-view>
