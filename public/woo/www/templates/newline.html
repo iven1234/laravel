@@ -1,0 +1,28 @@
+<ion-view view-title="">
+  <ion-nav-bar class="bar-light timeline-header">
+    <ion-nav-back-button>
+		<i class="ion-arrow-left-c"></i>圈子
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button class="button btn-add" ng-click="doSomething()">
+        保存
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content class="timeline-container">
+	<div>
+		<form>
+			<div class="timeline-cover" ng-click="showActionsheet()">
+				<a><img ng-src="{{cover}}" /></a>
+				<i class="ion-plus-round"></i>
+			</div>
+			<div class="timeline-date">
+				<a>2015年2月9日 上午11：45</a>
+			</div>
+			<div class="timeline-content">
+				<textarea  ng-model="htmlVariable" placeholder="从这里开启你的旅程"></textarea>
+			</div>
+		</form>
+	</div>
+  </ion-content>
+</ion-view>

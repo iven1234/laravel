@@ -1,9 +1,37 @@
 angular.module('starter.services', ['ngResource'])
 
 .factory('User',function($resource){
-  return $resource('/api/register', null, {
-    save: {method: 'POST'}
+  return $resource('json/:verb.json', null, {
+    login: {method: 'POST', params:{verb: 'login'}},
+    register: {method: 'POST', params:{verb: 'register'}}
   });
+})
+
+.factory('Timeline', function($resource){
+
+  return $resource('/api/timeline');
+
+})
+
+.factory('$localstorage', function($window){
+
+  return {
+
+    set: function(key, value){
+      $window.localStorage[key] = value;
+    },
+    get: function(key, defaultValue){
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value){
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key){
+      return JSON.parse($window.localStorage[key] || '{}')
+    }
+
+  }
+
 })
 
 .factory('Chats', function() {

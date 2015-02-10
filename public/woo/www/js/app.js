@@ -5,9 +5,17 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'directiveModule', 'angularMoment', 'akoenig.deckgrid', 'ngCordova'])
 
-.run(function($ionicPlatform) {
+.constant('angularMomentConfig', {
+    // preprocess: 'utc', // optional
+    timezone: 'Asia/Shanghai' // optional
+})
+
+.run(function($ionicPlatform, amMoment) {
+
+  amMoment.changeLocale('zh-cn');
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,7 +29,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(function($ionicConfigProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
+
+
+  $ionicConfigProvider.backButton.text('');
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -31,8 +42,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
    .state('login',{
     url: '/login',
-    templateUrl: 'templates/login.html',
+    templateUrl: 'templates/frontpage.html',
     controller: 'LoginCtrl'
+  })
+
+   .state('signin',{
+    url: '/signin',
+    templateUrl: 'templates/login2.html',
+    controller: 'SigninCtrl'
   })
 
    .state('main',{
@@ -46,16 +63,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/timeline',
     views: {
         'menuContent' :{
-          templateUrl: "templates/timeline.html",
+          templateUrl: "templates/timeline2.html",
           controller: 'TimelineCtrl'
+        }
+    }
+   })
+
+   .state('main.newline',{
+    url: '/newline',
+    views: {
+        'menuContent' :{
+          templateUrl: "templates/newline.html",
+          controller: 'NewLineCtrl'
+        }
+    }
+   })
+
+   .state('main.friends',{
+    url: '/friends',
+    views: {
+        'menuContent' :{
+          templateUrl: "templates/friends.html",
+          controller: 'FriendCtrl'
         }
     }
    })
 
    .state('main.share',{
     url: '/share',
-    templateUrl: 'templates/share.html',
-    controller: 'ShareCtrl'
+    views: {
+        'menuContent' :{
+          templateUrl: "templates/share.html",
+          controller: 'ShareCtrl'
+        }
+    }
    })
 
   // setup an abstract state for the tabs directive

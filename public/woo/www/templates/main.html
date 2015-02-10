@@ -4,55 +4,55 @@
 		<ion-nav-bar class="side-top bar-light">
         	<ion-nav-back-button>
         	</ion-nav-back-button>
-        	<button class="button add-time" ng-show="isTimeline" ng-click="show()"><i class="icon-add"></i></button>
-    	</ion-nav-bar>
+          <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear" menu-toggle="left">
+                <i class="icon-menu"></i>
+              </button>
+          </ion-nav-buttons>
+    </ion-nav-bar>
 
 		<ion-nav-view name="menuContent">
 		</ion-nav-view>
 
-		<ion-nav-bar class="side-nav">
-			<ion-nav-buttons side="left">
-
-				<button class="button button-icon button-clear icon-menu" menu-toggle="left"></button>
-
-			</ion-nav-buttons>
-		<ion-nav-bar>
 	</ion-side-menu-content>
 
-	<ion-side-menu width="130" side="left">
+	<ion-side-menu width="102" side="left">
 		<ion-header-bar>
-			<h1 class="title">Woo!</h1>
+      <a><img ng-src="img/profile.jpg" /></a>
 		</ion-header-bar>
-		<ion-content>
-			<ul class="list">
-              	<a href="#/share" class="side-item item" menu-close><i class="icon-share"></i>分享</a>
-			</ul>
-		</ion-content>
+		<ul class="side-tools">
+      <li><a href="#/main/timeline" menu-close><i class="icon-settings"></i></a>
+       </li>
+       <li><a href="#/main/timeline" menu-close><i class="icon-grid"></i></a>
+       </li>
+       <li><a href="#/main/share" menu-close><i class="icon-comment"></i></a>
+       </li>
+       <li><a href="#/main/friends" menu-close><i class="icon-users"></i></a>
+       </li>
+       <li><a href="#/main/share" menu-close><i class="icon-switch"></i></a>
+       </li>
+		</ul>
 	</ion-side-menu>
 </ion-side-menus>
 
 <script id="templates/modal.html" type="text/ng-template">
-      <ion-modal-view>
-        <ion-header-bar class="bar bar-header bar-positive">
-          <h1 class="title">New Contact</h1>
-          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+      <ion-modal-view class="modal-new">
+        <ion-header-bar class="bar bar-header bar-dark">
+
+          <button class="button button-clear button-primary" ng-click="modal.hide()">取消</button>
+          <h1 class="title">记录</h1>
+          
         </ion-header-bar>
         <ion-content class="padding">
+
           <div class="list">
-            <label class="item item-input">
-              <span class="input-label">First Name</span>
-              <input ng-model="newUser.firstName" type="text">
+            <label class="item item-input">              
+            <textarea name="content" ng-model="message.content" type="text">
+            </textarea>
             </label>
-            <label class="item item-input">
-              <span class="input-label">Last Name</span>
-              <input ng-model="newUser.lastName" type="text">
-            </label>
-            <label class="item item-input">
-              <span class="input-label">Email</span>
-              <input ng-model="newUser.email" type="text">
-            </label>
-            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+
+            <button class="button button-full button-positive" ng-click="create(message)">发送</button>
           </div>
-		</ion-content>
+		    </ion-content>
       </ion-modal-view>
 </script>

@@ -1,0 +1,37 @@
+﻿<ion-view view-title="圈子"  hide-back-button="true">
+	<ion-nav-buttons side="right">
+      <button class="button btn-add" ng-click="add()">
+        <i class="icon-add"></i>
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+	<div class="timeline-profile">
+		<a class="profile-bg"><img ng-src="img/{{ profile.bg}}" /></a>
+		<div class="bg"></div>
+		<div class="profile-wrap">
+			<h2>{{ profile.name }}</h2>
+		</div>
+	</div>
+	<div class="timeline-style clearfix">
+		<div class="timeline-nums">
+			<div class="nums-mine">
+				<a class="active"><i class="icon-disc"></i>自己<span>26</span></a>
+			</div>
+			<div class="nums-other">
+				<a><i class="icon-heart2"></i>好友<span>12</span></a>
+			</div>
+		</div>
+		<div class="timeline-type">
+			<a ng-click="changeType('horizontal')"><i class="icon-view-module"></i></a>
+			<a ng-click="changeType('vertical')"><i class="icon-view-stream list"></i></a>
+		</div>
+	</div>
+	
+    <div class="timeline-wrapper">
+
+		<div ng-if="type == 'horizontal'" class="deckgrid clearfix" deckgrid="" source="photos" cardtemplate="templates/deckgrid-card.html"></div>
+
+		<timeline ng-if="type == 'vertical'" line="line" ng-repeat="line in lines"></timeline>
+	</div>
+  </ion-content>
+</ion-view>

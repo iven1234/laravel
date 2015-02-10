@@ -1,0 +1,18 @@
+﻿<div class="line-wrapper">
+	<div class="line-profile">
+		<a><img ng-src="img/{{ line.avatar }}" /></a>
+		<div class="profile-info">
+			<h4>{{ line.name }}</h4>
+			<p><i class="ion-android-time"></i>2分钟之前</p>
+		</div>
+	</div>
+	<div class="line-content">
+		<a ng-repeat="pic in line.pics"><img ng-src="img/{{ pic }}" /></a>
+		<p>{{ line.content }}</p>
+	</div>
+	<div class="line-tools">
+		<a><i class="icon-chat-3"></i>18</a>
+		<a><i class="icon-heart"></i>20</a>
+		<a class="more"><i class="icon-more-horiz"></i></a>
+	</div>
+</div>

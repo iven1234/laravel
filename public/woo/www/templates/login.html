@@ -1,20 +1,22 @@
 <ion-view id="login">
 	<ion-content>
-		<h2>Welcome woo!</h2>
+		<h2><span class="icon-woo"></span></h2>
 		<div class="list">
-			<label class="item item-input">
-				<input name="email" type="text" placeholder="Username" ng-model="user.email">
-			</label>
-			<label class="item item-input">
-				<input name="password" type="password" placeholder="Password" ng-model="user.password">
-			</label>
+			<form name="signup_form" novalidate ng-submit="login()">
+				<label class="item item-input input-eml">
+				<input name="email" type="email" placeholder="邮件名称" ng-model="user.email" required>
+				</label>
+				<label class="item item-input input-psd">
+					<input name="password" type="password" placeholder="密码" ng-model="user.password" minlength=6 required>
+				</label>
 
-			<a ng-click="login(user)"><i class="icon-chevron-with-circle-right"></i></a>
+				<button ng-class="{disabled: signup_form.$invalid}" ng-disabled="signup_form.$invalid" type="submit"><i class="icon-chevron-with-circle-right"></i></button>
+			</form>
 
 		</div>	
 	</ion-content>
 
-	<a class="register" ng-click="register()">
+	<a class="register" ng-click="register(user)">
 		<i class="icon-playlist-add"></i>
 	</a>
 	

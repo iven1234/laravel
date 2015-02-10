@@ -1,0 +1,27 @@
+﻿<ion-view view-title="登陆">
+	<ion-content>
+		<div class="list sign-wrapper">
+            <label class="item item-input email-input">
+				<span class="input-label">邮箱</span>
+				<input type="text" ng-model="user.username">
+            </label>
+            <label class="item item-input">
+				<span class="input-label">密码</span>
+				<input type="password" ng-model="user.password">
+            </label>
+		</div>
+		<div class="padding sign-button">
+            <button class="button button-block button-assertive" ng-click="signIn()">
+				登陆
+            </button>
+		</div>
+		
+	</ion-content>
+</ion-view>
+
+<div class="sign-signup">
+	<p class="text-center">尚未拥有账号？</p>
+	 <a class="button button-block button-dark" href="#/forgot-password">
+		免费注册
+	</a>
+</div>

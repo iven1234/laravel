@@ -23,6 +23,18 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-woo3:before {
+	content: "\ed1d";
+}
+
+.icon-woo2:before {
+	content: "\ed1c";
+}
+
+.icon-woo:before {
+	content: "\ecfb";
+}
+
 .icon-type:before {
 	content: "\e600";
 }

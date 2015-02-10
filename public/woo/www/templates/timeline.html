@@ -1,6 +1,11 @@
-<ion-view view-title="Timeline">
+<ion-view view-title="时间轴">
 	<ion-content class ="padding">
-        <p>Swipe to the right to reveal the left menu.</p>
-        <p>(On desktop click and drag from left to right)</p>
+
+	<div class="wrapper">
+      <ul class="timeline">
+        <line timeline="line" 
+        ng-repeat="line in lines|orderBy: 'created_at': true "></line>
+      </ul>
+	</div>
     </ion-content>
 </ion-view>
