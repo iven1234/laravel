@@ -21,80 +21,133 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.signin{
+	position: absolute;
+	top: 188px;
+	width: 100%;
+	padding: 0;
+	border: none;
+	background: transparent;
+	text-align: center;
+	z-index: 2;
+	i{
+		font-size: 32px;
+	}
+}
+.front-container{
+	li{
+		position: absolute;
+		width: 100%;
+		span{
+			color: #00CFEA;
+		}
+		&.swap{
+			bottom: 140px;
+			left: 234px;
+			span{
+				font-size: 24px;
+			}
+		}
+		&.chat{
+			bottom: 140px;
+			left: 278px;
+			span{
+				font-size: 24px;
+			}
+		}
+	}
+	>a{
+		position: absolute;
+		bottom: 50px;
+		left: 12px;
+	}
+	img{
+		width: 260px;
+		max-width: 100%;
+	}
+	.title{
+		margin-top: 58px; 
+		text-align: center;
+		i{
+			font-size: 52px;
+		}
+	}
+}
+
 .action-sheet{
-     margin-left: 0;
-     margin-right: 0;
-     .action-sheet-group{
-          margin-top: 4px;
-          margin-bottom: 0;
-          border-radius: 0;
-          button:first-child{
-               border-top: 0;
-          }
-     }
-     .button{
-          /*border-top: 0;*/
-          min-height: 0;
-          height: 32px;
-          line-height: 32px;
-          font-size: 14px;
-          color: #666;
-     }
+	margin-left: 0;
+	margin-right: 0;
+	.action-sheet-group{
+		margin-top: 4px;
+		margin-bottom: 0;
+		border-radius: 0;
+		button:first-child{
+			border-top: 0;
+		}
+	}
+	.button{
+		/*border-top: 0;*/
+		min-height: 0;
+		height: 32px;
+		line-height: 32px;
+		font-size: 14px;
+		color: #666;
+	}
 }
 
 .timeline-header {
 	.button {
-	    color: #333;
-	    background-color: transparent;
-	    border: none; 
-	    i {
-	      color: #333; 
-	      }
+		color: #333;
+		background-color: transparent;
+		border: none; 
+		i {
+			color: #333; 
+		}
 	}
 }
 
 .timeline-container {
 
-  	padding-top: 0; 
+	padding-top: 0; 
 	.timeline-cover {
-    position: relative;
-    height: 260px;
-    background-color: #1d1d1d;
-    text-align: center; 
-    	i {
-	      position: absolute;
-	      bottom: 112px;
-	      font-size: 32px;
-	      color: #fff; 
-	      }
+		position: relative;
+		height: 260px;
+		background-color: #1d1d1d;
+		text-align: center; 
+		i {
+			position: absolute;
+			bottom: 112px;
+			font-size: 32px;
+			color: #fff; 
+		}
     }
     .timeline-date,
     .timeline-content{
-    	width: 90%;
-	    margin: 0 auto;
-	    }
+		width: 90%;
+		margin: 0 auto;
+	}
 
 	.timeline-date {
-	    padding-top: 12px;
-	    border-bottom: 1px solid #eee; 
-	    a {
-	      line-height: 42px;
-	      color: #999;
-	      }
+		padding-top: 12px;
+		border-bottom: 1px solid #eee; 
+		a {
+			line-height: 42px;
+			color: #999;
+		}
     }
     .timeline-content {
-    	padding-top: 20px; 
+		padding-top: 20px; 
     }
-  }
+}
 
 .bar-header{
-  	height: 44px;
-  	.buttons{
-  		padding-top: 10px;
-  		.button{
-  			background-color: transparent;
-  		}
-  	}
+	height: 44px;
+	.buttons{
+		padding-top: 10px;
+		.button{
+			background-color: transparent;
+		}
+	}
 }
 
 .has-header{
@@ -114,7 +167,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		color: #fff;
 		font-size: 24px;
 		span{
-			  font-size: 60px;
+			font-size: 60px;
 		}
 	}
 	.list{
@@ -142,7 +195,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			margin: 32px auto 0;
 			padding: 0;
 			background: transparent;
-  			border: none;
+			border: none;
 
 			i{
 				font-size: 36px;
@@ -186,7 +239,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 					width: 100%;
 				}
 			}
-			
+
 		}
 		.side-tools{
 			margin-top: 134px;
@@ -234,7 +287,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		margin: 0;
 		padding-left: 64px;
 		padding-top: 22px;
-  		padding-bottom: 20px;
+		padding-bottom: 20px;
 		border: none;
 		background-color: transparent;
 		img{
@@ -340,8 +393,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			a{
 				color: #999;
 				i{
-				  	position: relative;
-  					top: 1px;
+					position: relative;
+					top: 1px;
 					padding-right: 6px;
 				}
 				span{
@@ -434,7 +487,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     padding:10px;
     width:1000px;
     img{
-    	max-width: 100%;
+		max-width: 100%;
     }
 }
 
@@ -521,8 +574,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .deckgrid {
-    margin: 0;
-    	width: 100%;
+		margin: 0;
+		width: 100%;
     }
 
     .deckgrid[deckgrid]::before {

@@ -7015,6 +7015,46 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.signin {
+  position: absolute;
+  top: 188px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+  z-index: 2; }
+  .signin i {
+    font-size: 32px; }
+
+.front-container li {
+  position: absolute;
+  width: 100%; }
+  .front-container li span {
+    color: #00CFEA; }
+  .front-container li.swap {
+    bottom: 140px;
+    left: 234px; }
+    .front-container li.swap span {
+      font-size: 24px; }
+  .front-container li.chat {
+    bottom: 140px;
+    left: 278px; }
+    .front-container li.chat span {
+      font-size: 24px; }
+.front-container > a {
+  position: absolute;
+  bottom: 50px;
+  left: 12px; }
+.front-container img {
+  width: 260px;
+  max-width: 100%; }
+.front-container .title {
+  margin-top: 58px;
+  text-align: center; }
+  .front-container .title i {
+    font-size: 52px; }
+
 .action-sheet {
   margin-left: 0;
   margin-right: 0; }
