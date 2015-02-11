@@ -7067,17 +7067,27 @@ a.button {
   .action-sheet .button {
     /*border-top: 0;*/
     min-height: 0;
-    height: 32px;
-    line-height: 32px;
+    height: 38px;
+    line-height: 38px;
     font-size: 14px;
     color: #666; }
 
-.timeline-header .button {
-  color: #333;
-  background-color: transparent;
-  border: none; }
-  .timeline-header .button i {
-    color: #333; }
+.timeline-header {
+  padding-top: 15px; }
+  .timeline-header .button {
+    color: #333;
+    background-color: transparent;
+    border: none;
+    font-size: 17px; }
+    .timeline-header .button i {
+      color: #333; }
+    .timeline-header .button.back-button {
+      position: relative;
+      padding-left: 24px; }
+      .timeline-header .button.back-button i {
+        position: absolute;
+        left: 0;
+        top: 3px; }
 
 .timeline-container {
   padding-top: 0; }
@@ -7108,7 +7118,7 @@ a.button {
   .bar-header .buttons {
     padding-top: 10px; }
     .bar-header .buttons .button {
-      background-color: transparent; }
+      background-color: transparent !important; }
       .bar-header .buttons .button.btn-add {
         padding-right: 0; }
 
@@ -7374,11 +7384,13 @@ a.button {
   float: left; }
 
 .photo {
-  background: #fff url(images/spinner.gif) center 30px no-repeat;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
+  position: relative;
   margin: 12px 4px;
-  position: relative; }
+  padding: 4px;
+  border: 1px solid #eee;
+  border-radius: 2px; }
+  .photo > a {
+    text-decoration: none; }
 
 .photo .photo-index {
   background: rgba(0, 0, 0, 0.9);
@@ -7395,8 +7407,13 @@ a.button {
 .photo .photo-wrapper {
   min-height: 60px; }
 
-.photo .photo-description {
-  padding: 15px; }
+.photo .photo-description h3 {
+  margin-top: 12px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  color: #333; }
+.photo .photo-description p {
+  color: #666; }
 
 .deckgrid .column.size-1-5 {
   width: 200px; }

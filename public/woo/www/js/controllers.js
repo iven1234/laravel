@@ -94,8 +94,8 @@ angular.module('starter.controllers', [])
   };
 
   $scope.photos = [
-      {id: 'photo-1', name: 'Awesome photo', src: 'http://lorempixel.com/400/300/abstract'},
-      {id: 'photo-2', name: 'Great photo', src: 'http://lorempixel.com/450/400/city'},
+      {id: 'photo-1', name: '色彩配色', src: 'http://lorempixel.com/400/300/abstract'},
+      {id: 'photo-2', name: '古塔游览一日', src: 'http://lorempixel.com/450/400/city'},
       {id: 'photo-3', name: 'Strange photo', src: 'http://lorempixel.com/400/300/people'},
       {id: 'photo-4', name: 'A photo?', src: 'http://lorempixel.com/400/300/transport'},
       {id: 'photo-5', name: 'What a photo', src: 'http://lorempixel.com/450/300/fashion'},
@@ -139,8 +139,18 @@ angular.module('starter.controllers', [])
 // $cordovaGeolocation.getCurrentPosition(posOptions).then(function(position) {
 //        var lat  = position.coords.latitude
 //        var long = position.coords.longitude
+		// console.log(
+		  // 'Latitude: '          + position.coords.latitude          + '\n' +
+          // 'Longitude: '         + position.coords.longitude         + '\n' +
+          // 'Altitude: '          + position.coords.altitude          + '\n' +
+          // 'Accuracy: '          + position.coords.accuracy          + '\n' +
+          // 'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          // 'Heading: '           + position.coords.heading           + '\n' +
+          // 'Speed: '             + position.coords.speed             + '\n' +
+          // 'Timestamp: '         + position.timestamp                + '\n'
+		// );
 //      }, function(err) {
-//        // error
+//        // console.log(error);
 //      });
 
  $scope.showActionsheet = function(){
