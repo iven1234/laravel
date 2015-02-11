@@ -7084,6 +7084,8 @@ a.button {
     border: none;
     font-size: 17px; }
     .timeline-header .button.activated {
+      border: none;
+      box-shadow: none;
       background: transparent; }
     .timeline-header .button.header-item {
       padding-top: 0; }
@@ -7221,7 +7223,7 @@ a.button {
 #friends-list .list-item {
   margin: 0;
   border: none;
-  border-bottom: 1px solid #b2b2b2; }
+  border-bottom: 1px solid #eee; }
 #friends-list .item-content {
   padding: 0 10.667px; }
 #friends-list .item-avatar {

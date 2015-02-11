@@ -109,6 +109,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		border: none; 
 		font-size: 17px;
 		&.activated{
+			border: none;
+			box-shadow: none;
 			background: transparent;
 		}
 		&.header-item{
@@ -303,7 +305,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	.list-item{
 		margin: 0;
 		border: none;
-		border-bottom: 1px solid #b2b2b2;
+		border-bottom: 1px solid #eee;
 	}
 	.item-content{
 		padding: 0 10.667px;
