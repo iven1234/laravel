@@ -88,9 +88,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	.button{
 		/*border-top: 0;*/
 		min-height: 0;
-		height: 38px;
-		line-height: 38px;
-		font-size: 14px;
+		height: 42px;
+		line-height: 42px;
+		font-size: 15px;
 		color: #666;
 	}
 }
@@ -98,13 +98,22 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .timeline-header {
 	padding-top: 10px;
 	.buttons{
-		padding-top: 5px !important;
+		padding-top: 5px;
+	}
+	.title + .buttons {
+		top: 0;
 	}
 	.button {
 		color: #333;
 		background-color: transparent;
 		border: none; 
 		font-size: 17px;
+		&.activated{
+			background: transparent;
+		}
+		&.header-item{
+			padding-top: 0;
+		}
 		i {
 			color: #333; 
 		}
@@ -114,7 +123,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			i{
 				position: absolute;
 				left: 0;
-				top: 8px;
+				top: 4px;
 			}
 		}
 	}

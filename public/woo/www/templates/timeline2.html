@@ -36,5 +36,7 @@
 
 		<timeline ng-if="type == 'vertical'" line="line" ng-repeat="line in lines"></timeline>
 	</div>
+	<ion-infinite-scroll ng-if="!moredata" icon="ion-loading-c" on-infinite="loadMore()" distance="1%">
+	</ion-infinite-scroll>
   </ion-content>
 </ion-view>

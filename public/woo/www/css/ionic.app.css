@@ -7067,20 +7067,26 @@ a.button {
   .action-sheet .button {
     /*border-top: 0;*/
     min-height: 0;
-    height: 38px;
-    line-height: 38px;
-    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 15px;
     color: #666; }
 
 .timeline-header {
   padding-top: 10px; }
   .timeline-header .buttons {
-    padding-top: 5px !important; }
+    padding-top: 5px; }
+  .timeline-header .title + .buttons {
+    top: 0; }
   .timeline-header .button {
     color: #333;
     background-color: transparent;
     border: none;
     font-size: 17px; }
+    .timeline-header .button.activated {
+      background: transparent; }
+    .timeline-header .button.header-item {
+      padding-top: 0; }
     .timeline-header .button i {
       color: #333; }
     .timeline-header .button.back-button {
@@ -7089,7 +7095,7 @@ a.button {
       .timeline-header .button.back-button i {
         position: absolute;
         left: 0;
-        top: 8px; }
+        top: 4px; }
 
 .timeline-container {
   padding-top: 0; }

@@ -146,7 +146,19 @@ angular.module('starter.controllers', [])
     }, 1000);
       
   };
-
+  
+  $scope.loadMore = function() {
+  
+	console.log('loadMore!');
+	$scope.moredata=false;
+    $timeout( function() {
+      //simulate async response
+       $scope.photos.push({id: 'photo-2', name: '古塔游览一日', src: 'http://lorempixel.com/450/400/city'}); 
+	  
+	   $scope.$broadcast('scroll.infiniteScrollComplete');
+	   
+    }, 1000);
+  };
  
  $scope.add = function(){
   $state.go('main.newline');
