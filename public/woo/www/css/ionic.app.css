@@ -7017,7 +7017,7 @@ a.button {
 
 .signin {
   position: absolute;
-  top: 188px;
+  top: 248px;
   width: 100%;
   padding: 0;
   border: none;
@@ -7034,23 +7034,23 @@ a.button {
     color: #00CFEA; }
   .front-container li.swap {
     bottom: 140px;
-    left: 234px; }
+    left: 258px; }
     .front-container li.swap span {
       font-size: 24px; }
   .front-container li.chat {
     bottom: 140px;
-    left: 278px; }
+    left: 312px; }
     .front-container li.chat span {
       font-size: 24px; }
 .front-container > a {
   position: absolute;
-  bottom: 50px;
-  left: 12px; }
+  bottom: 20px;
+  left: 20px; }
 .front-container img {
   width: 260px;
   max-width: 100%; }
 .front-container .title {
-  margin-top: 58px;
+  margin-top: 108px;
   text-align: center; }
   .front-container .title i {
     font-size: 52px; }
@@ -7109,6 +7109,8 @@ a.button {
     padding-top: 10px; }
     .bar-header .buttons .button {
       background-color: transparent; }
+      .bar-header .buttons .button.btn-add {
+        padding-right: 0; }
 
 .has-header {
   top: 76px; }
@@ -7273,10 +7275,10 @@ a.button {
     opacity: 0.5; }
   .timeline-profile .profile-wrap {
     position: absolute;
-    bottom: 12px;
+    bottom: 6px;
     width: 100%; }
     .timeline-profile .profile-wrap h2 {
-      font-size: 24px;
+      font-size: 18px;
       text-align: center;
       color: #fff; }
 
@@ -7286,6 +7288,8 @@ a.button {
     color: #666 !important; }
   .timeline-style .timeline-nums {
     float: left; }
+    .timeline-style .timeline-nums i {
+      color: #00CFFF; }
     .timeline-style .timeline-nums .nums-mine, .timeline-style .timeline-nums .nums-other {
       float: left;
       margin-right: 24px;
@@ -7296,13 +7300,15 @@ a.button {
           position: relative;
           top: 1px;
           padding-right: 6px; }
+          .timeline-style .timeline-nums .nums-mine a i.icon-heart2, .timeline-style .timeline-nums .nums-other a i.icon-heart2 {
+            color: #FF009B; }
         .timeline-style .timeline-nums .nums-mine a span, .timeline-style .timeline-nums .nums-other a span {
           margin-left: 6px;
           padding: 0 6px;
           border-radius: 20px;
           color: #fff;
           font-size: 12px;
-          background-color: #333; }
+          background-color: #666; }
   .timeline-style .timeline-type {
     float: right; }
     .timeline-style .timeline-type a {
@@ -7310,7 +7316,7 @@ a.button {
       margin-left: 12px; }
     .timeline-style .timeline-type i {
       font-size: 24px;
-      color: #333; }
+      color: #666; }
 
 .timeline-wrapper .line-wrapper {
   padding: 20px 12px 20px;

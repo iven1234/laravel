@@ -23,7 +23,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .signin{
 	position: absolute;
-	top: 188px;
+	top: 248px;
 	width: 100%;
 	padding: 0;
 	border: none;
@@ -43,14 +43,14 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		}
 		&.swap{
 			bottom: 140px;
-			left: 234px;
+			left: 258px;
 			span{
 				font-size: 24px;
 			}
 		}
 		&.chat{
 			bottom: 140px;
-			left: 278px;
+			left: 312px;
 			span{
 				font-size: 24px;
 			}
@@ -58,15 +58,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	>a{
 		position: absolute;
-		bottom: 50px;
-		left: 12px;
+		bottom: 20px;
+		left: 20px;
 	}
 	img{
 		width: 260px;
 		max-width: 100%;
 	}
 	.title{
-		margin-top: 58px; 
+		margin-top: 108px; 
 		text-align: center;
 		i{
 			font-size: 52px;
@@ -146,6 +146,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		padding-top: 10px;
 		.button{
 			background-color: transparent;
+			&.btn-add{
+				padding-right: 0;
+			}
 		}
 	}
 }
@@ -368,10 +371,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	.profile-wrap{
 		position: absolute;
-		bottom: 12px;
+		bottom: 6px;
 		width: 100%;
 		h2{
-			font-size: 24px;
+			font-size: 18px;
 			text-align: center;
 			color: #fff;
 		}
@@ -385,6 +388,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 	.timeline-nums{
 		float: left;
+		i{
+			color: #00CFFF;
+		}
 		.nums-mine,
 		.nums-other{
 			float: left;
@@ -396,6 +402,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 					position: relative;
 					top: 1px;
 					padding-right: 6px;
+					&.icon-heart2{
+						color: #FF009B;
+					}
 				}
 				span{
 					margin-left: 6px;
@@ -403,7 +412,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 					border-radius: 20px;
 					color: #fff;
 					font-size: 12px;
-					background-color: #333;
+					background-color: #666;
 				}
 			}
 		}
@@ -416,7 +425,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		}
 		i{
 			font-size: 24px;
-			color: #333;
+			color: #666;
 		}
 	}
 }
