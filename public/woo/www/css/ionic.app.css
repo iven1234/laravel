@@ -7073,7 +7073,7 @@ a.button {
     color: #666; }
 
 .bar .title + .buttons {
-  top: 6px; }
+  top: 0; }
 
 .timeline-header {
   padding-top: 10px; }
