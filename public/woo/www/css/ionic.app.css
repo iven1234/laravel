@@ -7073,7 +7073,9 @@ a.button {
     color: #666; }
 
 .timeline-header {
-  padding-top: 15px; }
+  padding-top: 10px; }
+  .timeline-header .buttons {
+    padding-top: 5px !important; }
   .timeline-header .button {
     color: #333;
     background-color: transparent;
@@ -7087,7 +7089,7 @@ a.button {
       .timeline-header .button.back-button i {
         position: absolute;
         left: 0;
-        top: 3px; }
+        top: 8px; }
 
 .timeline-container {
   padding-top: 0; }

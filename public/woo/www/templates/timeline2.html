@@ -5,6 +5,9 @@
       </button>
     </ion-nav-buttons>
   <ion-content>
+	<ion-refresher on-refresh="doRefresh()">
+                     
+    </ion-refresher>
 	<div class="timeline-profile">
 		<a class="profile-bg"><img ng-src="img/{{ profile.bg}}" /></a>
 		<div class="bg"></div>
