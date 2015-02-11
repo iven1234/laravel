@@ -7072,12 +7072,13 @@ a.button {
     font-size: 15px;
     color: #666; }
 
+.bar .title + .buttons {
+  top: 6px; }
+
 .timeline-header {
   padding-top: 10px; }
   .timeline-header .buttons {
     padding-top: 5px; }
-  .timeline-header .title + .buttons {
-    top: 0; }
   .timeline-header .button {
     color: #333;
     background-color: transparent;
