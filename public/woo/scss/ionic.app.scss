@@ -486,6 +486,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 				}
 				p{
 					color: #ccc;
+					span{
+						font-size: 12px;
+					}
 				}
 			}
 		}
@@ -504,15 +507,27 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			}
 		}
 		.line-tools{
+			padding-top: 6px;
 			a{
+				position: relative;
 				margin-right: 12px;
+				padding-left: 24px;
 				color: #666;
 				i{
+					position: absolute;
+					left: 0;
+					top: 0;
 					margin-right: 6px;
+					font-size: 16px;
 				}
 				&.more{
 					float: right;
 					margin-right: 0;
+					i{
+						top: -4px;
+						margin-right: 0;
+						font-size: 28px;
+					}
 				}
 			}
 		}

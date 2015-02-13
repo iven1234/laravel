@@ -1,10 +1,11 @@
 <ion-view view-title="">
+  <form name="create_line" novalidate ng-submit="createLine()">
   <ion-nav-bar class="bar-light timeline-header">
     <ion-nav-back-button>
 		<i class="icon-keyboard-arrow-left"></i>圈子
     </ion-nav-back-button>
     <ion-nav-buttons side="right">
-      <button class="button" ng-click="doSomething()">
+      <button class="button" type="submit" ng-disabled="create_line.$invalid">
         保存
       </button>
     </ion-nav-buttons>
@@ -13,16 +14,18 @@
 	<div>
 		<form>
 			<div class="timeline-cover" ng-click="showActionsheet()">
-				<a><img ng-src="{{cover}}" /></a>
+				<input type="hidden" ng-model="line.cover" name="cover" />
+				<a><img ng-src="{{line.cover}}" /></a>
 				<i class="ion-plus-round"></i>
 			</div>
 			<div class="timeline-date">
-				<a>2015年2月9日 上午11：45</a>
+				<a>{{ nowTime | amDateFormat: 'ddd, MMMDo, A hh:mm' }}</a>
 			</div>
 			<div class="timeline-content">
-				<textarea  ng-model="htmlVariable" placeholder="从这里开启你的旅程"></textarea>
+				<textarea required ng-model="line.comment" placeholder="从这里开启你的旅程"></textarea>
 			</div>
 		</form>
 	</div>
   </ion-content>
+  </form>
 </ion-view>

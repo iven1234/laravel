@@ -3,7 +3,7 @@
 		<a><img ng-src="img/{{ line.avatar }}" /></a>
 		<div class="profile-info">
 			<h4>{{ line.name }}</h4>
-			<p><i class="ion-android-time"></i>2分钟之前</p>
+			<p><i class="ion-android-time"></i><span am-time-ago="line.created_at"></span></p>
 		</div>
 	</div>
 	<div class="line-content">

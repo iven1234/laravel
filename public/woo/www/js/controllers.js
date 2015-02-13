@@ -76,7 +76,7 @@ angular.module('starter.controllers', [])
   }];
 })
 
-.controller('TimelineCtrl',function($scope, $state, User, $timeout){
+.controller('TimelineCtrl',function($scope, $state, User, $timeout, Timeline){
  
   $scope.profile = {
         bg: 'banner2.jpg',
@@ -92,6 +92,13 @@ angular.module('starter.controllers', [])
   $scope.changeType = function(type){
     $scope.type = type;
   };
+  
+  //Timeline.query().then(function(data){
+	// bind data to timeline 
+	// I want to push data
+  //}, function(error){
+	//console.log(error);
+  //});
 
   $scope.photos = [
       {id: 'photo-1', name: '色彩配色', src: 'http://lorempixel.com/400/300/abstract'},
@@ -178,9 +185,9 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('NewLineCtrl', function($scope, $cordovaCamera, $cordovaImagePicker, $ionicActionSheet, $cordovaGeolocation, $ionicPopup){
+.controller('NewLineCtrl', function($scope, $cordovaCamera, $cordovaImagePicker, $ionicActionSheet, $cordovaGeolocation, $ionicPopup, Timeline){
  
-	var posOptions = {timeout: 10000, enableHighAccuracy: true};
+	var posOptions = {enableHighAccuracy: true};
 	$cordovaGeolocation.getCurrentPosition(posOptions).then(function(position) {
 	   var lat  = position.coords.latitude
 	   var long = position.coords.longitude
@@ -232,6 +239,19 @@ angular.module('starter.controllers', [])
         }
     });
  };
+ 
+ $scope.createLine = function(){
+	var line = $scope.line;
+	console.log('create line');
+	Timeline.save(line).then(function(){
+		// tip save successful
+		// $state.go('main.timeline');
+	}, function(error){
+		console.log(error);
+	});
+ };
+ 
+ $scope.nowTime = new Date();
 
  //image picker 
  var pickImage = function () { 
@@ -245,7 +265,7 @@ angular.module('starter.controllers', [])
       $cordovaImagePicker.getPictures(options) 
            .then(function (results) { 
                   
-                $scope.cover = results[0]; 
+                $scope.line.cover = results[0]; 
                   
            }, function (error) { 
                 // error getting photos 

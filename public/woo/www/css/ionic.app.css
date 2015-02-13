@@ -7361,6 +7361,8 @@ a.button {
     color: #333; }
   .timeline-wrapper .line-wrapper .line-profile .profile-info p {
     color: #ccc; }
+    .timeline-wrapper .line-wrapper .line-profile .profile-info p span {
+      font-size: 12px; }
   .timeline-wrapper .line-wrapper .line-content {
     margin-top: 18px;
     overflow: hidden; }
@@ -7372,14 +7374,26 @@ a.button {
       margin-top: 12px;
       color: #333;
       text-indent: 28px; }
-  .timeline-wrapper .line-wrapper .line-tools a {
-    margin-right: 12px;
-    color: #666; }
-    .timeline-wrapper .line-wrapper .line-tools a i {
-      margin-right: 6px; }
-    .timeline-wrapper .line-wrapper .line-tools a.more {
-      float: right;
-      margin-right: 0; }
+  .timeline-wrapper .line-wrapper .line-tools {
+    padding-top: 6px; }
+    .timeline-wrapper .line-wrapper .line-tools a {
+      position: relative;
+      margin-right: 12px;
+      padding-left: 24px;
+      color: #666; }
+      .timeline-wrapper .line-wrapper .line-tools a i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-right: 6px;
+        font-size: 16px; }
+      .timeline-wrapper .line-wrapper .line-tools a.more {
+        float: right;
+        margin-right: 0; }
+        .timeline-wrapper .line-wrapper .line-tools a.more i {
+          top: -4px;
+          margin-right: 0;
+          font-size: 28px; }
 
 .deckgrid {
   margin: 100px auto;

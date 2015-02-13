@@ -9,7 +9,7 @@ angular.module('starter.services', ['ngResource'])
 
 .factory('Timeline', function($resource){
 
-  return $resource('/api/timeline');
+  return $resource('http://192.168.1.7:49343/api/timeline');
 
 })
 
