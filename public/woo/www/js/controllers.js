@@ -125,7 +125,9 @@ angular.module('starter.controllers', [])
     
     console.log('Refreshing!');
     $timeout( function() {
-      //simulate async response
+      // simulate async response
+	  // 记下时间戳，然后搜索比较好
+	  // data.concat($scope.photos);
        $scope.photos = [
 		  {id: 'photo-2', name: '古塔游览一日', src: 'http://lorempixel.com/450/400/city'},
 		  {id: 'photo-1', name: '色彩配色', src: 'http://lorempixel.com/400/300/abstract'},
@@ -193,7 +195,7 @@ angular.module('starter.controllers', [])
 	   var long = position.coords.longitude
 	   $ionicPopup.alert({
 	   title:
-		 'Latitude: '          + position.coords.latitude          + '\n' +
+		  'Latitude: '          + position.coords.latitude          + '\n' +
 		  'Longitude: '         + position.coords.longitude         + '\n' +
 		  'Altitude: '          + position.coords.altitude          + '\n' +
 		  'Accuracy: '          + position.coords.accuracy          + '\n' +
