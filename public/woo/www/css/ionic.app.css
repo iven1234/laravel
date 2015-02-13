@@ -7106,7 +7106,8 @@ a.button {
     position: relative;
     height: 260px;
     background-color: #1d1d1d;
-    text-align: center; }
+    text-align: center;
+    overflow: hidden; }
     .timeline-container .timeline-cover i {
       position: absolute;
       bottom: 112px;
@@ -7131,6 +7132,7 @@ a.button {
     .bar-header .buttons .button {
       background-color: transparent !important; }
       .bar-header .buttons .button.btn-add {
+        padding-top: 6px;
         padding-right: 0; }
 
 .has-header {

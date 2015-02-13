@@ -79,7 +79,7 @@ angular.module('starter.controllers', [])
 .controller('TimelineCtrl',function($scope, $state, User, $timeout){
  
   $scope.profile = {
-        bg: 'bg2.jpg',
+        bg: 'banner2.jpg',
         name: '贝律铭'
       };
 
@@ -178,29 +178,33 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('NewLineCtrl', function($scope, $cordovaCamera, $cordovaImagePicker, $ionicActionSheet){
+.controller('NewLineCtrl', function($scope, $cordovaCamera, $cordovaImagePicker, $ionicActionSheet, $cordovaGeolocation, $ionicPopup){
  
-// var posOptions = {timeout: 10000, enableHighAccuracy: false};
-// $cordovaGeolocation.getCurrentPosition(posOptions).then(function(position) {
-//        var lat  = position.coords.latitude
-//        var long = position.coords.longitude
-		// console.log(
-		  // 'Latitude: '          + position.coords.latitude          + '\n' +
-          // 'Longitude: '         + position.coords.longitude         + '\n' +
-          // 'Altitude: '          + position.coords.altitude          + '\n' +
-          // 'Accuracy: '          + position.coords.accuracy          + '\n' +
-          // 'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          // 'Heading: '           + position.coords.heading           + '\n' +
-          // 'Speed: '             + position.coords.speed             + '\n' +
-          // 'Timestamp: '         + position.timestamp                + '\n'
-		// );
-//      }, function(err) {
-//        // console.log(error);
-//      });
+	var posOptions = {timeout: 10000, enableHighAccuracy: true};
+	$cordovaGeolocation.getCurrentPosition(posOptions).then(function(position) {
+	   var lat  = position.coords.latitude
+	   var long = position.coords.longitude
+	   $ionicPopup.alert({
+	   title:
+		 'Latitude: '          + position.coords.latitude          + '\n' +
+		  'Longitude: '         + position.coords.longitude         + '\n' +
+		  'Altitude: '          + position.coords.altitude          + '\n' +
+		  'Accuracy: '          + position.coords.accuracy          + '\n' +
+		  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+		  'Heading: '           + position.coords.heading           + '\n' +
+		  'Speed: '             + position.coords.speed             + '\n' +
+		  'Timestamp: '         + position.timestamp                + '\n'
+	   });
+	 }, function(error) {
+			console.log(error);
+			 $ionicPopup.alert({
+				title: error
+		});
+	});
 
- $scope.showActionsheet = function(){
+	$scope.showActionsheet = function(){
 
-  console.log('click show showActionsheet');
+	console.log('click show showActionsheet');
 
     $ionicActionSheet.show({
         buttons: [
@@ -226,7 +230,7 @@ angular.module('starter.controllers', [])
            console.log('DESTRUCT');
            return true;
         }
-      });
+    });
  };
 
  //image picker 

@@ -96,7 +96,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 .bar .title + .buttons {
-	top: 6px;
+	top: 0;
 }
 
 .timeline-header {
@@ -140,6 +140,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		height: 260px;
 		background-color: #1d1d1d;
 		text-align: center; 
+		overflow: hidden;
 		i {
 			position: absolute;
 			bottom: 112px;
@@ -173,6 +174,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 		.button{
 			background-color: transparent !important;
 			&.btn-add{
+				padding-top: 6px;
 				padding-right: 0;
 			}
 		}
